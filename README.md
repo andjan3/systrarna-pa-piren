@@ -20,24 +20,9 @@ env.example file explains what you need.
 ```
 
 
-
-Third, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-
-```
-
-
 Notes: We need to install mkcert to start proxy server. (https://www.storyblok.com/faq/setup-dev-server-https-windows)
 
-Proxy - Storyblok live preview
+Third Proxy - Storyblok live preview
 
 ```bash
 npm run proxy
@@ -49,7 +34,18 @@ pnpm proxy
 bun proxy
 ```
 
+Finally, run the development server:
 
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+
+```
 
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
