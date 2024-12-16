@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
-import { StoryblokProvider } from "@/components/StoryblokProvider";
 import "./globals.scss";
-
+import { StoryblokProvider } from "../components/StoryblokProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
