@@ -47,7 +47,7 @@ export const TableSection = ({ blok }: TableSectionProps) => {
                   return item.icon;
               }
             };
-            return data === index ? <Icons /> : null;
+            return data === index ? <Icons key={index} /> : null;
           })}
         </div>
         <div className="flex gap-5">
