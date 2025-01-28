@@ -20,6 +20,8 @@ interface ImageBannerProps {
 
 export const ImageBanner = ({ blok }: ImageBannerProps) => {
   const { title, image, content, link, button_title } = blok;
+
+  console.log(title);
   const { open, setOpen } = useStore();
 
   const handleOnClick = () => {
@@ -34,8 +36,12 @@ export const ImageBanner = ({ blok }: ImageBannerProps) => {
           className="object-cover"
           alt={image.name}
         />
-        <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-center text-white gap-8 p-4">
+        <div
+          id={title !== "Meny" ? "menu" : undefined}
+          className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-center text-white gap-8 p-4"
+        >
           <h2 className="font-bold">{title}</h2>
+
           <div className="mt-4 w-[50%]">{render(content)}</div>
 
           <button

@@ -4,7 +4,10 @@ import Link from "next/link";
 export const CTABlock = ({ blok, settings }: any) => {
   console.log("seeeetttings", blok);
   return (
-    <div className="grid grid-cols-2 w-[90%] h-[70vh] mx-auto mt-16">
+    <div
+      id="contact"
+      className="grid grid-cols-2 w-[90%] h-[70vh] mx-auto mt-16"
+    >
       <div className="relative w-full h-[700px]">
         <Image
           src={blok.image.filename}
@@ -16,7 +19,7 @@ export const CTABlock = ({ blok, settings }: any) => {
           <h2>{blok.title}</h2>
           <div>{settings.content.adress}</div>
           <div>{settings.content.phone_number}</div>
-          <Link href={settings.content.link.cached_url}>
+          <Link href={`mailto:${settings.content.link.cached_url}`}>
             {settings.content.link.url}
           </Link>
         </div>
