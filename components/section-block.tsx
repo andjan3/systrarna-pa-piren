@@ -16,7 +16,6 @@ interface SectionProps {
   };
 }
 export const SectionBlock = ({ blok }: SectionProps) => {
-  console.log("teeeest", blok);
   const { openDropdown, open, setOpenDropdown } = useStore();
 
   const handleDropdown = () => {
@@ -29,7 +28,7 @@ export const SectionBlock = ({ blok }: SectionProps) => {
     <div
       id={`${styling ? "booking" : "about"}`}
       className={`grid grid-cols-2 gap-8 ${
-        styling ? "bg-[#f8f8f8] h-[65vh] -mt-28" : "h-[95vh]"
+        styling ? "bg-[#f8f8f8] h-[65vh] -mt-28" : "h-[80vh]"
       } ${open && "mt-16"}`}
     >
       <div
@@ -61,7 +60,9 @@ export const SectionBlock = ({ blok }: SectionProps) => {
         {openDropdown && <div>{render(second_content)}</div>}
         <div
           className={`${
-            styling ? "hidden" : "flex gap-2 items-center cursor-pointer"
+            styling
+              ? "hidden"
+              : "flex gap-2 items-center cursor-pointer text-[20px]"
           }`}
           onClick={handleDropdown}
         >

@@ -28,7 +28,6 @@ interface HeroSectionProps {
 }
 
 export const HeroSection = ({ blok }: HeroSectionProps) => {
-  console.log("hej", blok);
   const { booking_title, booking_link, menu_link_title, menu_link, logo } =
     blok;
   return (
