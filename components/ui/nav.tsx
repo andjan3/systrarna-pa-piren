@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { LinkType } from "../lib/interface";
 
 interface NavProps {
   settings: {
@@ -18,13 +19,15 @@ export const Nav = ({ settings }: NavProps) => {
     <div className="header absolute bg-transparent text-black w-full py-10 z-50">
       <div className="flex justify-center container">
         <nav className="flex gap-8">
-          {menu.map((el: any) => {
-            return (
-              <ul>
-                <Link href={el.link.cached_url}>{el.title}</Link>
-              </ul>
-            );
-          })}
+          <ul className="flex gap-8">
+            {menu.map((el: LinkType, index: number) => {
+              return (
+                <Link href={el.link.cached_url} key={index}>
+                  {el.title}
+                </Link>
+              );
+            })}
+          </ul>
         </nav>
       </div>
     </div>
