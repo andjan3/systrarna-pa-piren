@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { render } from "storyblok-rich-text-react-renderer";
 import useStore from "./lib/store";
 
@@ -20,8 +19,6 @@ interface ImageBannerProps {
 
 export const ImageBanner = ({ blok }: ImageBannerProps) => {
   const { title, image, content, link, button_title } = blok;
-
-  console.log(title);
   const { open, setOpen } = useStore();
 
   const handleOnClick = () => {
@@ -45,7 +42,7 @@ export const ImageBanner = ({ blok }: ImageBannerProps) => {
           <div className="mt-4 w-[50%]">{render(content)}</div>
 
           <button
-            className="mt-4 px-6 py-2 bg-[#ef9941] text-[20px] text-white rounded"
+            className="mt-4 px-6 py-2 bg-[#ef9941] text-[20px] text-white rounded hover:bg-white hover:text-black"
             onClick={() => handleOnClick()}
           >
             {button_title}

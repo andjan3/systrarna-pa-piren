@@ -2,18 +2,34 @@
 import Image from "next/image";
 import useStore from "./lib/store";
 
-export const ImageBlock = ({ blok }: any) => {
+interface ImageBlockProps {
+  blok: {
+    title: string;
+    image: {
+      filename: string;
+      name: string;
+    };
+
+    second_image: {
+      filename: string;
+      name: string;
+    };
+  };
+}
+
+export const ImageBlock = ({ blok }: ImageBlockProps) => {
   const { open } = useStore();
+  const { title, image, second_image } = blok;
   return (
     <>
       {open && (
         <div className="-mt-32">
-          <h2 className="mb-16">{blok.title}</h2>
+          <h2 className="mb-16">{title}</h2>
 
           <div className=" grid grid-cols-2 gap-10 w-[80%] mx-auto">
             <div className="relative w-[100%] h-[90%]">
               <Image
-                src={blok.image.filename}
+                src={image.filename}
                 width={1000}
                 height={400}
                 alt={blok.image.name}
@@ -21,10 +37,10 @@ export const ImageBlock = ({ blok }: any) => {
             </div>
             <div>
               <Image
-                src={blok.second_image.filename}
+                src={second_image.filename}
                 width={1000}
                 height={400}
-                alt={blok.image.name}
+                alt={image.name}
               />
             </div>
           </div>

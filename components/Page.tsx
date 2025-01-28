@@ -4,8 +4,6 @@ import { storyblokEditable, StoryblokComponent } from "@storyblok/react/rsc";
 import { ImageBlock } from "./image-block";
 
 const Page = ({ blok, settings }: any) => {
-  console.log("halliiihallå", blok);
-
   return (
     <div {...storyblokEditable(blok)}>
       {blok &&

@@ -5,6 +5,8 @@ interface IsOpenMenu {
   setOpenDropdown: (value: boolean) => void;
   open: boolean;
   setOpen: (value: boolean) => void;
+  openingHours: boolean;
+  setOpeningHours: (value: boolean) => void;
 }
 
 const useStore = create<IsOpenMenu>((set) => ({
@@ -12,6 +14,8 @@ const useStore = create<IsOpenMenu>((set) => ({
   setOpenDropdown: (value) => set({ openDropdown: value }),
   open: false,
   setOpen: (value) => set({ open: value }),
+  openingHours: false,
+  setOpeningHours: (value) => set({ openingHours: value }),
 }));
 
 export default useStore;
