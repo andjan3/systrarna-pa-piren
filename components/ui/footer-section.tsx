@@ -52,11 +52,12 @@ export const FooterSection = ({ settings }: FooterProps) => {
       <div className="grid grid-cols-3 absolute top-10 w-[100%] h-[60vh] my-auto">
         <div className="flex justify-center items-center">
           <ul className="flex flex-col gap-4">
-            {footer_menu.map((el: LinkType) => {
+            {footer_menu.map((el: LinkType, index: number) => {
               return (
                 <Link
                   className="text-white text-[22px] uppercase"
                   href={el.link.cached_url}
+                  key={index}
                 >
                   {el.title}
                 </Link>
