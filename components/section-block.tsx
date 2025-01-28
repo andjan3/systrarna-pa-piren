@@ -17,7 +17,7 @@ interface SectionProps {
 }
 export const SectionBlock = ({ blok }: SectionProps) => {
   console.log("teeeest", blok);
-  const { openDropdown, setOpenDropdown } = useStore();
+  const { openDropdown, open, setOpenDropdown } = useStore();
 
   const handleDropdown = () => {
     setOpenDropdown(!openDropdown);
@@ -27,9 +27,10 @@ export const SectionBlock = ({ blok }: SectionProps) => {
 
   return (
     <div
+      id={`${styling ? "booking" : "about"}`}
       className={`grid grid-cols-2 gap-8 ${
         styling ? "bg-[#f8f8f8] h-[65vh] -mt-28" : "h-[95vh]"
-      }`}
+      } ${open && "mt-16"}`}
     >
       <div
         className={`relative order-2 ${

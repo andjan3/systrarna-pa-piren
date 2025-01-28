@@ -11,7 +11,7 @@ export const ImageBlock = ({ blok }: any) => {
           <h2 className="mb-16">{blok.title}</h2>
 
           <div className=" grid grid-cols-2 gap-10 w-[80%] mx-auto">
-            <div className="relative w-[100%] h-[50%]">
+            <div className="relative w-[100%] h-[90%]">
               <Image
                 src={blok.image.filename}
                 width={1000}
