@@ -26,12 +26,29 @@ span {
 }
 
 h1 {
-  font-size: 55px;
+  font-size: 45px;
   line-height: 60px;
+  text-align: center;
+}
+h2 {
+  font-size: 45px;
+  line-height: 60px;
+  text-align: center;
 }
 
 h4 {
   font-size: 16px;
+}
+
+.contact {
+  div,
+  a {
+    font-size: 26px;
+  }
+
+  a {
+    font-weight: 700;
+  }
 }
 
 p {
@@ -65,6 +82,15 @@ p {
   background-color: $bg;
 }
 
+nav {
+  li {
+    font-size: 16px;
+  }
+}
+
+.header {
+  background-color: rgba(255, 255, 255, 0.68);
+}
 .render-content {
   display: flex;
   flex-direction: column;
@@ -79,5 +105,14 @@ p {
     li {
       margin: 0px 0px 5px 20px;
     }
+  }
+}
+
+.hero-content {
+  a {
+    font-size: 20px;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    color: white;
   }
 }

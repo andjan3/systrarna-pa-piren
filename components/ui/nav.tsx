@@ -8,25 +8,24 @@ interface NavProps {
     logo: {
       filename: string;
     };
+    menu: any;
   };
 }
 
 export const Nav = ({ settings }: NavProps) => {
+  const { menu } = settings;
   return (
-    <div className="absolute bg-transparent text-[#ede8f5] w-full py-10 z-50">
-      <div className="flex justify-between container">
-        <Image
-          src={settings?.logo?.filename || ""}
-          width={170}
-          height={120}
-          alt="WorkingProgress"
-        />
-
-        <div className="flex gap-5">
-          <Link href="">About</Link>
-          <Link href="">Services</Link>
-          <Link href="">FAQ</Link>
-        </div>
+    <div className="header absolute bg-transparent text-black w-full py-10 z-50">
+      <div className="flex justify-center container">
+        <nav className="flex gap-8">
+          {menu.map((el: any) => {
+            return (
+              <ul>
+                <Link href={el.link.cached_url}>{el.title}</Link>
+              </ul>
+            );
+          })}
+        </nav>
       </div>
     </div>
   );
