@@ -6,9 +6,9 @@ import { Header } from "@/components/ui/header";
 import { Footer } from "@/components/ui/footer";
 
 export const metadata: Metadata = {
-  title: "WorkingProgress",
+  title: "Systrarna på piren",
   description:
-    "Vi stärker din arbetsplats – med insikt, engagemang och transparens.",
+    "Din sommarkrog i Mölle med hamnens största uteservering direkt mot havet och solnedgången. ",
 };
 
 const cachedFetch = (input: any, init?: any): Promise<Response> => {

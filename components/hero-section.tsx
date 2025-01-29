@@ -37,7 +37,7 @@ export const HeroSection = ({ blok }: HeroSectionProps) => {
         autoPlay
         muted
         loop
-        className="absolute top-0 left-0 w-full object-cover h-[100%]"
+        className="absolute top-0 left-0 w-full object-cover h-[120%] lg:h-[100%] "
       >
         <source
           src="https://systrarnapapiren.se/wp-content/uploads/2024/05/systrana.mp4"
@@ -45,7 +45,7 @@ export const HeroSection = ({ blok }: HeroSectionProps) => {
         />
       </video>
       <div className="container flex flex-col items-center justify-center gap-4 z-20">
-        <div className="w-[35%] h-[35%] relative z-30 mb-4 mt-20">
+        <div className="w-[65%] lg:w-[35%] h-[25%] lg:h-[35%] relative z-30 mb-4 mt-20 lg:mt-20">
           <Image
             src={logo.filename}
             fill
@@ -58,7 +58,7 @@ export const HeroSection = ({ blok }: HeroSectionProps) => {
           <h1 className="lg:max-w-[80%] 2xl:max-w-[60%] flex text-white">
             {blok.title}
           </h1>
-          <h3 className="text-2xl max-w-[50%] flex rendered-content">
+          <h3 className="text-2xl text-center lg:text-start lg:max-w-[50%] flex rendered-content">
             {blok.subtitle}
           </h3>
         </div>

@@ -49,7 +49,7 @@ export const FooterSection = ({ settings }: FooterProps) => {
         fill
         className="object-cover object-bottom"
       />
-      <div className="grid grid-cols-3 absolute top-10 w-[100%] h-[60vh] my-auto">
+      <div className="grid lg:grid-cols-3 absolute top-10 w-[100%] h-[60vh] my-auto">
         <div className="flex justify-center items-center">
           <ul className="flex flex-col gap-4">
             {footer_menu.map((el: LinkType, index: number) => {

@@ -45,8 +45,8 @@ export const CTABlock = ({ blok, settings }: CTAProps) => {
   const { content } = settings;
 
   return (
-    <div id="contact" className="grid grid-cols-2 w-[100%] mx-auto mt-16">
-      <div className="relative w-full h-[65vh]">
+    <div id="contact" className="grid lg:grid-cols-2 w-[100%] mx-auto mt-16">
+      <div className="relative w-full h-[45vh] lg:h-[65vh]">
         <Image
           src={image.filename}
           fill
@@ -75,7 +75,7 @@ export const CTABlock = ({ blok, settings }: CTAProps) => {
           </div>
         </div>
       </div>
-      <div className="relative w-full h-[65vh]">
+      <div className="relative w-full h-[45vh] lg:h-[65vh]">
         <Image
           src={second_image.filename}
           fill
