@@ -29,19 +29,21 @@ export const SectionBlock = ({ blok }: SectionProps) => {
       id={`${styling ? "booking" : "about"}`}
       className={`grid lg:grid-cols-2 gap-8 ${
         styling
-          ? "bg-[#f8f8f8] lg:h-[65vh] "
-          : "h-full mt-6 lg:h-[80vh] lg:mt-0"
-      } ${open && "mt-16 "}`}
+          ? "bg-[#f8f8f8] lg:h-[65vh] lg:-mt-[3rem] lg:mb-[3rem]"
+          : "h-full mt-6 lg:mt-0"
+      } ${open && "mt-16"}`}
     >
       <div
         className={`relative order-2 ${
-          styling ? "mx-auto my-auto w-[80%] h-[80%]" : "w-[100%] h-[100%] "
+          styling
+            ? "mx-auto my-auto w-[80%] h-[80%]"
+            : "w-[100%] h-[45vh] lg:h-[74vh] "
         }`}
       >
         <Image
           src={image.filename}
           fill
-          className="object-cover"
+          className="object-cover lg:max-h-full"
           alt={image.name}
         />
       </div>
@@ -54,7 +56,7 @@ export const SectionBlock = ({ blok }: SectionProps) => {
           className={`text-[45px] leading-[60px] ${
             styling
               ? "lg:mt-0 text-start mt-4 lg:pb-12"
-              : "text-center mt-8 lg:mt-32"
+              : "text-center mt-8 lg:mt-28"
           }`}
         >
           {title}
@@ -66,7 +68,7 @@ export const SectionBlock = ({ blok }: SectionProps) => {
           className={`${
             styling
               ? "hidden"
-              : "flex gap-2 items-center cursor-pointer text-[20px]"
+              : "flex gap-2 items-center cursor-pointer text-[20px] mb-8"
           }`}
           onClick={handleDropdown}
         >
