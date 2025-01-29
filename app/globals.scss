@@ -26,7 +26,7 @@ span {
 }
 
 h1 {
-  font-size: 45px;
+  font-size: 32px;
   line-height: 60px;
   text-align: center;
 }
@@ -88,9 +88,6 @@ nav {
   }
 }
 
-.header {
-  background-color: rgba(255, 255, 255, 0.68);
-}
 .render-content {
   display: flex;
   flex-direction: column;
@@ -121,6 +118,28 @@ nav {
   p {
     span {
       color: white !important;
+    }
+  }
+}
+
+.image-banner-content {
+  p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 45px;
+  }
+
+  .header {
+    background-color: rgba(255, 255, 255, 0.68);
+  }
+
+  .image-banner-content {
+    p {
+      font-size: 22px;
     }
   }
 }
