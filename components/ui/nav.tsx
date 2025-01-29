@@ -6,6 +6,7 @@ import { LinkType } from "../lib/interface";
 import { TbMenu } from "react-icons/tb";
 import { TfiClose } from "react-icons/tfi";
 import useStore from "../lib/store";
+import { useEffect, useState } from "react";
 
 interface NavProps {
   settings: {
@@ -19,23 +20,25 @@ interface NavProps {
 export const Nav = ({ settings }: NavProps) => {
   const { menu } = settings;
   const { openMenu, setOpenMenu } = useStore();
-  return (
-    /*   <div className="header absolute bg-transparent text-black w-full py-10 z-50">
-      <div className="flex justify-center container">
-        <nav className="flex gap-8">
-          <ul className="flex gap-8">
-            {menu.map((el: LinkType, index: number) => {
-              return (
-                <Link href={el.link.cached_url} key={index}>
-                  {el.title}
-                </Link>
-              );
-            })}
-          </ul>
-        </nav>
-      </div>
-    </div> */
+  const [scroll, setScroll] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 40) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  return (
     <header
       className={`absolute px-5 top-0 flex justify-center items-center w-full py-5 z-50`}
     >
@@ -44,9 +47,9 @@ export const Nav = ({ settings }: NavProps) => {
           size={80}
           strokeWidth={0.5}
           color="white"
-          className={` ${
-            openMenu ? "hidden" : "block"
-          } cursor-pointer text-[60px] mt-5 lg:mt-0 lg:text-[80px] transition-all ease-linear  `}
+          className={` ${openMenu ? "hidden" : "block"} ${
+            scroll ? "bg-black rounded-full p-2" : "bg-transparent"
+          }   cursor-pointer text-[60px] mt-5 lg:mt-0 lg:text-[80px] transition-all ease-linear  `}
           onClick={() => setOpenMenu(true)}
         />
 
@@ -63,7 +66,7 @@ export const Nav = ({ settings }: NavProps) => {
             />
           </div>
 
-          <ul className="font-kis-normal flex flex-col pl-8 lg:pl-16 pt-16 gap-3">
+          <ul className="font-kis-normal flex flex-col items-center lg:items-start  lg:pl-16 pt-16 md:gap-8 gap-3">
             {menu.map((el: LinkType, index: number) => {
               return (
                 <Link
@@ -72,7 +75,7 @@ export const Nav = ({ settings }: NavProps) => {
                   onClick={() => {
                     setOpenMenu(false);
                   }}
-                  className={`text-[38px] lg:text-[40px] relative hover:underline decoration-[#16110D] underline-offset-8 
+                  className={`text-[38px] lg:text-[40px] relative hover:underline decoration-black underline-offset-8 
                   `}
                 >
                   {el.title}

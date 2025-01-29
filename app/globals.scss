@@ -31,7 +31,7 @@ h1 {
   text-align: center;
 }
 h2 {
-  font-size: 45px;
+  font-size: 32px;
   line-height: 60px;
   text-align: center;
 }
@@ -43,7 +43,7 @@ h4 {
 .contact {
   div,
   a {
-    font-size: 26px;
+    font-size: 20px;
   }
 
   a {
@@ -141,5 +141,25 @@ nav {
     p {
       font-size: 22px;
     }
+  }
+  h2 {
+    font-size: 45px;
+    line-height: 60px;
+    text-align: center;
+  }
+
+  .contact {
+    div,
+    a {
+      font-size: 26px;
+    }
+
+    a {
+      font-weight: 700;
+    }
+  }
+
+  p {
+    font-size: 20px;
   }
 }
