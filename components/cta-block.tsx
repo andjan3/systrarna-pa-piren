@@ -53,16 +53,16 @@ export const CTABlock = ({ blok, settings }: CTAProps) => {
           className="object-cover"
           alt={image.filename}
         />
-        <div className="contact absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center text-white z-10 gap-4">
+        <div className="contact absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center text-white z-10 gap-4 min-h-[60vh] mt-6 lg:min-h-[40vh] lg:mt-28">
           <h2>{title}</h2>
           <div>{content.adress}</div>
           <div>{content.phone_number}</div>
           <Link href={`mailto:${content.link.cached_url}`}>
             {content.link.url}
           </Link>
-          <div className="footer-content text-white">
+          <div className="footer-content  text-white h-[100%] lg:h-[100%]">
             <div
-              className="flex items-center gap-2 cursor-pointer"
+              className="flex items-center gap-2 cursor-pointer lg:min-w-[15vw]"
               onClick={() => onClickHandler()}
             >
               <h2 className="text-[20px] lg:text-[30px]">
