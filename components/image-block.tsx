@@ -23,10 +23,10 @@ export const ImageBlock = ({ blok }: ImageBlockProps) => {
   return (
     <>
       {open && (
-        <div className="-mt-32">
-          <h2 className="mb-16">{title}</h2>
+        <div className="lg:-mt-32">
+          <h2 className="pt-6 mb-6 lg:mb-16 lg:pt-0">{title}</h2>
 
-          <div className=" grid grid-cols-2 gap-10 w-[80%] mx-auto">
+          <div className=" grid grid-cols-2 gap-10 w-[90%] lg:w-[80%] mx-auto">
             <div className="relative w-[100%] h-[90%]">
               <Image
                 src={image.filename}

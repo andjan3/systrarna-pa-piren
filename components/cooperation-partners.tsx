@@ -16,11 +16,11 @@ export const CooperationBlock = ({ blok }: CooperationProps) => {
   return (
     <div
       className={`flex flex-col items-center justify-center gap-6 ${
-        open ? "mt-16" : "-mt-24"
+        open ? "mt-16" : "mt-6 lg:-mt-24"
       }`}
     >
       <h2>{title}</h2>
-      <div className="w-[40%] leading-[3rem] text-center">
+      <div className="px-6 lg:px-0 lg:w-[40%] leading-[3rem] text-center">
         {render(content)}
       </div>
     </div>

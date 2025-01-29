@@ -42,16 +42,16 @@ export const FooterSection = ({ settings }: FooterProps) => {
     phone_number,
   } = settings;
   return (
-    <footer className="relative w-[100%] h-[70vh]">
+    <footer className="relative w-[100%] h-[80vh] lg:h-[70vh]">
       <Image
         src={image.filename}
         alt={image.name}
         fill
         className="object-cover object-bottom"
       />
-      <div className="grid lg:grid-cols-3 absolute top-10 w-[100%] h-[60vh] my-auto">
+      <div className="lg:grid lg:grid-cols-3 absolute top-10 w-[100%] h-[60vh] my-auto">
         <div className="flex justify-center items-center">
-          <ul className="flex flex-col gap-4">
+          <ul className="hidden lg:flex flex-col gap-4">
             {footer_menu.map((el: LinkType, index: number) => {
               return (
                 <Link
@@ -65,7 +65,7 @@ export const FooterSection = ({ settings }: FooterProps) => {
             })}
           </ul>
         </div>
-        <div className="flex flex-col items-center gap-20 mt-20">
+        <div className="flex flex-col items-center gap-10 lg:gap-20 mt-20">
           <Image src={logo.filename} alt={logo.name} width={240} height={140} />
           <div className="flex gap-4">
             <Link href={fb_link.cached_url}>

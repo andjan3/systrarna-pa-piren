@@ -30,13 +30,15 @@ interface HeroSectionProps {
 export const HeroSection = ({ blok }: HeroSectionProps) => {
   const { booking_title, booking_link, menu_link_title, menu_link, logo } =
     blok;
+
   return (
     <div className="hero-content h-[100vh] flex" {...storyblokEditable}>
-      <div className="absolute top-0 h-full w-full bg-[#3d52a0] opacity-20  z-10" />
+      <div className="absolute top-0 h-[120%] lg:h-full overflow-hidden w-full bg-[#3d52a0] opacity-20  z-10" />
       <video
         autoPlay
         muted
         loop
+        playsInline
         className="absolute top-0 left-0 w-full object-cover h-[120%] lg:h-[100%] "
       >
         <source

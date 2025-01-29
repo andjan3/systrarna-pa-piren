@@ -65,7 +65,9 @@ export const CTABlock = ({ blok, settings }: CTAProps) => {
               className="flex items-center gap-2 cursor-pointer"
               onClick={() => onClickHandler()}
             >
-              <h2 className="text-[30px]">{content.opening_title}</h2>
+              <h2 className="text-[20px] lg:text-[30px]">
+                {content.opening_title}
+              </h2>
               <MdOutlineKeyboardArrowDown
                 className={`${openingHours && "rotate-180"}`}
               />
@@ -82,9 +84,9 @@ export const CTABlock = ({ blok, settings }: CTAProps) => {
           className="object-cover"
           alt={second_image.filename}
         />
-        <div className="contact absolute top-24 left-0 w-full h-full flex flex-col items-center justify-center text-white z-10 gap-4">
+        <div className="contact absolute top-14 lg:top-24 left-0 w-full h-full flex flex-col items-center justify-center text-white z-10 gap-4">
           <Link
-            className="mt-4 px-6 py-2 bg-[#ef9941] !text-[20px] !font-semibold hover:bg-white hover:text-black text-white rounded"
+            className="mt-4 px-6 py-2 bg-[#ef9941] !text-[14px] lg:!text-[20px] !font-semibold hover:bg-white hover:text-black text-white rounded"
             href={button.cached_url}
           >
             {button_title}

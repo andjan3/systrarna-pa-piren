@@ -29,7 +29,7 @@ export const SectionBlock = ({ blok }: SectionProps) => {
       id={`${styling ? "booking" : "about"}`}
       className={`grid lg:grid-cols-2 gap-8 ${
         styling
-          ? "bg-[#f8f8f8] h-[65vh] lg:-mt-28"
+          ? "bg-[#f8f8f8] lg:h-[65vh] "
           : "h-full mt-6 lg:h-[80vh] lg:mt-0"
       } ${open && "mt-16 "}`}
     >
@@ -46,13 +46,15 @@ export const SectionBlock = ({ blok }: SectionProps) => {
         />
       </div>
       <div
-        className={`image-block flex flex-col gap-4 ${
+        className={` image-block flex flex-col gap-4 ${
           styling ? "w-[80%] mx-auto my-auto" : "px-6 lg:px-16"
         }`}
       >
         <h2
           className={`text-[45px] leading-[60px] ${
-            styling ? "mt-0 text-start pb-12" : "text-center mt-8 lg:mt-32"
+            styling
+              ? "lg:mt-0 text-start mt-4 lg:pb-12"
+              : "text-center mt-8 lg:mt-32"
           }`}
         >
           {title}

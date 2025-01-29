@@ -25,8 +25,8 @@ export const ImageBanner = ({ blok }: ImageBannerProps) => {
     setOpen(!open);
   };
   return (
-    <div className="w-full h-[75vh] lg:h-[90vh] relative">
-      <div className="w-full h-[100%] lg:h-[80%] relative ">
+    <div className=" h-[75vh] lg:h-[90vh] relative">
+      <div className=" h-[100%] lg:h-[80%] relative ">
         <Image
           src={image.filename}
           fill
