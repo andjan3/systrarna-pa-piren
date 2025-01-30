@@ -46,14 +46,14 @@ export const CTABlock = ({ blok, settings }: CTAProps) => {
 
   return (
     <div id="contact" className="grid lg:grid-cols-2 w-[100%] mx-auto mt-16">
-      <div className="relative w-full h-[45vh] lg:h-[65vh]">
+      <div className="relative w-full h-[65vh] lg:h-[68vh]">
         <Image
           src={image.filename}
           fill
           className="object-cover"
           alt={image.filename}
         />
-        <div className="contact absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center text-white z-10 gap-4 min-h-[60vh] mt-6 lg:min-h-[40vh] lg:mt-28">
+        <div className="contact absolute top-[12%] left-0 w-full h-full flex flex-col items-center  text-white z-10 gap-4 min-h-[60vh] mt-6 lg:min-h-[40vh]">
           <h2>{title}</h2>
           <div>{content.adress}</div>
           <div>{content.phone_number}</div>
@@ -62,7 +62,7 @@ export const CTABlock = ({ blok, settings }: CTAProps) => {
           </Link>
           <div className="footer-content  text-white h-[100%] lg:h-[100%]">
             <div
-              className="flex items-center gap-2 cursor-pointer lg:min-w-[15vw]"
+              className="flex items-center justify-center gap-2 cursor-pointer lg:min-w-[15vw]"
               onClick={() => onClickHandler()}
             >
               <h2 className="text-[20px] lg:text-[30px]">
@@ -73,11 +73,15 @@ export const CTABlock = ({ blok, settings }: CTAProps) => {
               />
             </div>
 
-            {openingHours && <div>{render(content.content)}</div>}
+            {openingHours && (
+              <div className="flex justify-center">
+                {render(content.content)}
+              </div>
+            )}
           </div>
         </div>
       </div>
-      <div className="relative w-full h-[45vh] lg:h-[65vh]">
+      <div className="relative w-full h-[65vh] lg:h-[68vh]">
         <Image
           src={second_image.filename}
           fill

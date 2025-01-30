@@ -128,6 +128,32 @@ nav {
   }
 }
 
+.contact-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.adress,
+.phone-number {
+  margin: 0px 8px;
+}
+
+.separator {
+  margin: 0 4px;
+}
+
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .separator {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   h1 {
     font-size: 45px;
