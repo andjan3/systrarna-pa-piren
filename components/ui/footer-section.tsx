@@ -42,7 +42,7 @@ export const FooterSection = ({ settings }: FooterProps) => {
     phone_number,
   } = settings;
   return (
-    <footer className="relative w-[100%] h-[80vh] lg:h-[70vh]">
+    <footer className="relative w-[100%] h-[80vh] lg:h-[80vh]">
       <Image
         src={image.filename}
         alt={image.name}
@@ -76,9 +76,13 @@ export const FooterSection = ({ settings }: FooterProps) => {
             </Link>
           </div>
           <div className="text-center text-white text-[16px]">
-            <Link href={`mailto:${link_title} `}>{link_title}</Link>
-            <div>
-              {adress} | {phone_number}
+            <Link href={`mailto:${link_title}`}>{link_title}</Link>
+            <div className="contact-info pt-2 lg:pt-0">
+              {adress && <span className="adress pb-2 lg:pb-0">{adress}</span>}
+              {adress && phone_number && <span className="separator"> | </span>}
+              {phone_number && (
+                <span className="phone-number">{phone_number}</span>
+              )}
             </div>
           </div>
         </div>

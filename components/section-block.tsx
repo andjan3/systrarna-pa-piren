@@ -37,7 +37,7 @@ export const SectionBlock = ({ blok }: SectionProps) => {
         className={`relative order-2 ${
           styling
             ? "mx-auto my-auto w-[80%] h-[80%]"
-            : "w-[100%] h-[45vh] lg:h-[74vh] "
+            : "w-[100%] h-[45vh] lg:h-[94vh] "
         }`}
       >
         <Image
@@ -48,15 +48,13 @@ export const SectionBlock = ({ blok }: SectionProps) => {
         />
       </div>
       <div
-        className={` image-block flex flex-col gap-4 ${
+        className={` image-block flex flex-col gap-4 lg:justify-center ${
           styling ? "w-[80%] mx-auto my-auto" : "px-6 lg:px-16"
         }`}
       >
         <h2
           className={`text-[45px] leading-[60px] ${
-            styling
-              ? "lg:mt-0 text-start mt-4 lg:pb-12"
-              : "text-center mt-8 lg:mt-28"
+            styling ? "lg:mt-0 text-start mt-4" : "text-center mt-8"
           }`}
         >
           {title}
@@ -68,7 +66,7 @@ export const SectionBlock = ({ blok }: SectionProps) => {
           className={`${
             styling
               ? "hidden"
-              : "flex gap-2 items-center cursor-pointer text-[20px] mb-8"
+              : "flex gap-2 items-center cursor-pointer text-[20px] lg:mb-8"
           }`}
           onClick={handleDropdown}
         >

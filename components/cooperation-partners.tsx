@@ -16,7 +16,7 @@ export const CooperationBlock = ({ blok }: CooperationProps) => {
   return (
     <div
       className={`flex flex-col items-center justify-center gap-6 ${
-        open ? "mt-16" : "mt-6 lg:-mt-24"
+        open ? "mt-16" : "mt-6 lg:-mt-12"
       }`}
     >
       <h2>{title}</h2>
