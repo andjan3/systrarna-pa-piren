@@ -13,7 +13,7 @@ interface NavProps {
     logo: {
       filename: string;
     };
-    menu: any;
+    menu: LinkType[];
   };
 }
 
