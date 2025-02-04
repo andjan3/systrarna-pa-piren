@@ -32,14 +32,17 @@ export const HeroSection = ({ blok }: HeroSectionProps) => {
     blok;
 
   return (
-    <div className="hero-content h-[100vh] flex" {...storyblokEditable}>
-      <div className="absolute top-0 h-[120%] lg:h-full overflow-hidden w-full bg-[#3d52a0] opacity-20  z-10" />
+    <div
+      className="hero-content h-[100vh] lg:h-[110vh] flex"
+      {...storyblokEditable}
+    >
+      <div className="absolute top-0 h-[120%] lg:h-[110vh] overflow-hidden w-full bg-[#3d52a0] opacity-20  z-10 " />
       <video
         autoPlay
         muted
         loop
         playsInline
-        className="absolute top-0 left-0 w-full object-cover h-[120%] lg:h-[100%] "
+        className="absolute top-0 left-0 w-full object-cover h-[120%] lg:h-[110vh]"
       >
         <source
           src="https://systrarnapapiren.se/wp-content/uploads/2024/05/systrana.mp4"
@@ -60,9 +63,9 @@ export const HeroSection = ({ blok }: HeroSectionProps) => {
           <h1 className="lg:max-w-[80%] 2xl:max-w-[60%] flex text-white">
             {blok.title}
           </h1>
-          <h3 className="text-2xl text-center lg:text-start lg:max-w-[50%] flex rendered-content">
+          <h2 className="text-2xl text-center lg:text-3xl lg:text-start lg:max-w-[50%] flex rendered-content">
             {blok.subtitle}
-          </h3>
+          </h2>
         </div>
         {blok.content && (
           <p className="lg:max-w-[80%] 2xl:max-w-[50%] flex text-color">
