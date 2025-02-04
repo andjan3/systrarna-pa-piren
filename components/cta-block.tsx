@@ -46,14 +46,8 @@ export const CTABlock = ({ blok, settings }: CTAProps) => {
 
   return (
     <div id="contact" className="grid lg:grid-cols-2 w-[100%] mx-auto mt-16">
-      <div className="relative w-full h-[65vh] lg:h-[68vh]">
-        <Image
-          src={image.filename}
-          fill
-          className="object-cover"
-          alt={image.filename}
-        />
-        <div className="contact absolute top-[12%] left-0 w-full h-full flex flex-col items-center  text-white z-10 gap-4 min-h-[60vh] mt-6 lg:min-h-[40vh]">
+      <div className="relative w-full h-[65vh] lg:h-[68vh] bg-[#569fd4]">
+        <div className="contact absolute top-[12%] left-0 w-full h-full flex flex-col items-center justify-center text-white z-10 gap-2 min-h-[60vh] ">
           <h2>{title}</h2>
           <div>{content.adress}</div>
           <div>{content.phone_number}</div>
@@ -61,23 +55,16 @@ export const CTABlock = ({ blok, settings }: CTAProps) => {
             {content.link.url}
           </Link>
           <div className="footer-content  text-white h-[100%] lg:h-[100%]">
-            <div
-              className="flex items-center justify-center gap-2 cursor-pointer lg:min-w-[15vw]"
-              onClick={() => onClickHandler()}
-            >
+            <div className="flex items-center justify-center gap-2 cursor-pointer lg:min-w-[15vw]">
               <h2 className="text-[20px] lg:text-[30px]">
                 {content.opening_title}
               </h2>
-              <MdOutlineKeyboardArrowDown
-                className={`${openingHours && "rotate-180"}`}
-              />
+              {openingHours}
             </div>
 
-            {openingHours && (
-              <div className="flex justify-center">
-                {render(content.content)}
-              </div>
-            )}
+            <div className="flex justify-center text-center">
+              {render(content.content)}
+            </div>
           </div>
         </div>
       </div>
@@ -90,7 +77,7 @@ export const CTABlock = ({ blok, settings }: CTAProps) => {
         />
         <div className="contact absolute top-14 lg:top-24 left-0 w-full h-full flex flex-col items-center justify-center text-white z-10 gap-4">
           <Link
-            className="mt-4 px-6 py-2 bg-[#ef9941] !text-[14px] lg:!text-[20px] !font-semibold hover:bg-white hover:text-black text-white rounded"
+            className="mt-4 px-6 py-2 bg-[#569fd4] !text-[14px] lg:!text-[20px] !font-semibold hover:bg-white hover:text-black text-white rounded"
             href={button.cached_url}
           >
             {button_title}

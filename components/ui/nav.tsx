@@ -48,7 +48,7 @@ export const Nav = ({ settings }: NavProps) => {
           strokeWidth={0.5}
           color="white"
           className={` ${openMenu ? "hidden" : "block"} ${
-            scroll ? "bg-black rounded-full p-2" : "bg-transparent"
+            scroll ? "bg-[#569fd4] rounded-full p-2" : "bg-transparent"
           }   cursor-pointer text-[60px] mt-5 lg:mt-0 lg:text-[80px] transition-all ease-linear  `}
           onClick={() => setOpenMenu(true)}
         />

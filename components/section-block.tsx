@@ -27,16 +27,16 @@ export const SectionBlock = ({ blok }: SectionProps) => {
   return (
     <div
       id={`${styling ? "booking" : "about"}`}
-      className={`grid lg:grid-cols-2 gap-8 ${
+      className={`grid lg:grid-cols-2 gap-8  mb-10 lg:mb-0 ${
         styling
-          ? "bg-[#f8f8f8] lg:h-[65vh] lg:-mt-[3rem] lg:mb-[3rem]"
+          ? "bg-[#f8f8f8] lg:p-10 lg:h-[90vh] lg:-mt-24"
           : "h-full mt-6 lg:mt-0"
       } ${open && "mt-16"}`}
     >
       <div
         className={`relative order-2 ${
           styling
-            ? "mx-auto my-auto w-[80%] h-[80%]"
+            ? "mx-auto my-auto w-[80%] h-[80%] "
             : "w-[100%] h-[45vh] lg:h-[94vh] "
         }`}
       >

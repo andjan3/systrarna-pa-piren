@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { render } from "storyblok-rich-text-react-renderer";
 import useStore from "./lib/store";
+import { LinkType } from "./lib/interface";
 
 interface ImageBannerProps {
   blok: {
@@ -11,7 +12,7 @@ interface ImageBannerProps {
       filename: string;
       name: string;
     };
-    link: any;
+    link: LinkType;
     content: React.ReactNode;
     button_title: string;
   };
@@ -44,7 +45,7 @@ export const ImageBanner = ({ blok }: ImageBannerProps) => {
           </div>
 
           <button
-            className="mt-4 px-6 py-2 bg-[#ef9941] text-[20px] text-white rounded hover:bg-white hover:text-black"
+            className="mt-4 px-6 py-2 bg-[#569fd4] text-[20px] text-white rounded hover:bg-white hover:text-black"
             onClick={() => handleOnClick()}
           >
             {button_title}
