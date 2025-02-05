@@ -27,7 +27,7 @@ export const ImageBanner = ({ blok }: ImageBannerProps) => {
   };
   return (
     <div className=" h-[75vh] lg:h-[90vh] relative">
-      <div className=" h-[100%] lg:h-[85%] relative ">
+      <div className="h-[100%] lg:h-[85%] relative">
         <Image
           src={image.filename}
           fill
@@ -36,11 +36,11 @@ export const ImageBanner = ({ blok }: ImageBannerProps) => {
         />
         <div
           id={title !== "Meny" ? "menu" : undefined}
-          className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-center text-white gap-4 lg:gap-8 p-4"
+          className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-center text-white gap-4 lg:gap-8 p-4 bg-black bg-opacity-40"
         >
           <h2 className="font-bold">{title}</h2>
 
-          <div className="image-banner-content mt-4 lg:w-[50%]">
+          <div className="image-banner-content lg:w-[50%]">
             {render(content)}
           </div>
 
