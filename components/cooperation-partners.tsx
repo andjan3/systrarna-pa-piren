@@ -13,10 +13,11 @@ interface CooperationProps {
 export const CooperationBlock = ({ blok }: CooperationProps) => {
   const { open } = useStore();
   const { title, content } = blok;
+  console.log("opeeeen", open);
   return (
     <div
       className={`flex flex-col items-center justify-center gap-6 ${
-        open ? "mt-16" : "mt-6 lg:-mt-12"
+        open ? "mt-6 lg:-mt-32" : "mt-10 lg:-mt-10"
       }`}
     >
       <h2>{title}</h2>

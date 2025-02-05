@@ -27,9 +27,9 @@ export const SectionBlock = ({ blok }: SectionProps) => {
   return (
     <div
       id={`${styling ? "booking" : "about"}`}
-      className={`grid lg:grid-cols-2 gap-8  mb-10 lg:mb-0 ${
+      className={`grid lg:grid-cols-2 gap-8  lg:mb-0 ${
         styling
-          ? "bg-[#f8f8f8] lg:p-10 lg:h-[90vh] lg:-mt-24"
+          ? "bg-[#f8f8f8] py-10 lg:p-10 lg:h-[90vh] lg:-mt-24"
           : "h-full mt-6 lg:mt-0"
       } ${open && "mt-16"}`}
     >

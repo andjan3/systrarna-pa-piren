@@ -29,17 +29,15 @@ export const ImageBlock = ({ blok }: ImageBlockProps) => {
     <>
       {open && (
         <div
-          className={`lg:-mt-32 w-[90%] mx-auto ${open && "lg:mb-40 lg:pt-10"}`}
+          className={`lg:-mt-32 w-[90%] mx-auto ${open && "lg:mb-52 lg:pt-10"}`}
         >
-          <div className="flex items-center justify-between w-full">
-            <h2 className="pt-6 mb-6 lg:mb-10 lg:pt-10 text-center w-full">
-              {title}
-            </h2>
+          <div className="flex items-center justify-between w-full lg:pt-10 lg:min-h-[60px] mb-10">
+            <h2 className="text-center w-full">{title}</h2>
             <div
-              className="cursor-pointer z-10"
+              className="cursor-pointer z-10 "
               onClick={() => handleOnClick()}
             >
-              <IoIosCloseCircleOutline fontSize={50} />
+              <IoIosCloseCircleOutline className="text-[30px] lg:text-[50px]" />
             </div>
           </div>
 
