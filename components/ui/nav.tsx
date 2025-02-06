@@ -40,7 +40,7 @@ export const Nav = ({ settings }: NavProps) => {
 
   return (
     <header
-      className={`absolute px-5 top-0 flex justify-center items-center w-full py-5 z-50`}
+      className={`absolute px-5 top-0 flex justify-center items-center lg:w-full py-5 z-50`}
     >
       <div className={`flex justify-end fixed right-5 top-2`}>
         <TbMenu

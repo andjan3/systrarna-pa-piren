@@ -15,11 +15,23 @@ interface SectionProps {
     second_content: React.ReactNode;
   };
 }
+
 export const SectionBlock = ({ blok }: SectionProps) => {
-  const { openDropdown, open, setOpenDropdown } = useStore();
+  const { openDropdown, setOpenDropdown } = useStore();
 
   const handleDropdown = () => {
-    setOpenDropdown(!openDropdown);
+    const newState = !openDropdown;
+    setOpenDropdown(newState);
+
+    if (!newState) {
+      const targetElement = document.getElementById("about");
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }
   };
 
   const { title, image, content, second_content, styling } = blok;
@@ -27,11 +39,11 @@ export const SectionBlock = ({ blok }: SectionProps) => {
   return (
     <div
       id={`${styling ? "booking" : "about"}`}
-      className={`grid lg:grid-cols-2 gap-8  lg:mb-0 ${
+      className={`grid lg:grid-cols-2 gap-8 lg:mb-0 ${
         styling
           ? "bg-[#f8f8f8] py-10 lg:p-10 lg:h-[90vh] lg:-mt-24"
           : "h-full mt-6 lg:mt-0"
-      } ${open && "mt-16"}`}
+      }`}
     >
       <div
         className={`relative order-2 ${
@@ -47,8 +59,9 @@ export const SectionBlock = ({ blok }: SectionProps) => {
           alt={image.name}
         />
       </div>
+
       <div
-        className={` image-block flex flex-col gap-4 lg:justify-center ${
+        className={`image-block flex flex-col gap-4 lg:justify-center ${
           styling ? "w-[80%] mx-auto my-auto" : "px-6 lg:px-16"
         }`}
       >
@@ -61,7 +74,9 @@ export const SectionBlock = ({ blok }: SectionProps) => {
         </h2>
 
         <div>{render(content)}</div>
+
         {openDropdown && <div>{render(second_content)}</div>}
+
         <div
           className={`${
             styling

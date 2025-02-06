@@ -5,6 +5,7 @@ import { IoIosCloseCircleOutline } from "react-icons/io";
 
 interface ImageBlockProps {
   blok: {
+    _uid: string;
     title: string;
     image: {
       filename: string;
@@ -31,8 +32,10 @@ export const ImageBlock = ({ blok }: ImageBlockProps) => {
         <div
           className={`lg:-mt-32 w-[90%] mx-auto ${open && "lg:mb-52 lg:pt-10"}`}
         >
-          <div className="flex items-center justify-between w-full lg:pt-10 lg:min-h-[60px] mb-10">
-            <h2 className="text-center w-full">{title}</h2>
+          <div className="flex items-center justify-between w-full lg:pt-10 lg:min-h-[60px] lg:mb-10">
+            <h2 className="text-center w-full text-[20px] lg:text-[35px]">
+              {title}
+            </h2>
             <div
               className="cursor-pointer z-10 "
               onClick={() => handleOnClick()}
@@ -41,7 +44,7 @@ export const ImageBlock = ({ blok }: ImageBlockProps) => {
             </div>
           </div>
 
-          <div className=" grid grid-cols-2 gap-10 w-[90%] lg:w-[80%] mx-auto ">
+          <div className=" grid lg:grid-cols-2 gap-10 w-[90%] lg:w-[80%] mx-auto mb-6 lg:mb-0">
             <div className="relative w-[100%] h-[90%]">
               <Image
                 src={image.filename}
