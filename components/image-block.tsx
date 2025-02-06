@@ -16,19 +16,22 @@ interface ImageBlockProps {
       filename: string;
       name: string;
     };
+    category: string;
   };
 }
 
 export const ImageBlock = ({ blok }: ImageBlockProps) => {
-  const { open, setOpen } = useStore();
+  const { open, setOpen, category } = useStore();
   const { title, image, second_image } = blok;
   const handleOnClick = () => {
     setOpen(!open);
   };
 
+  const isCategoryMatch = blok.category.includes(category);
+
   return (
     <>
-      {open && (
+      {open && isCategoryMatch && (
         <div
           className={`lg:-mt-32 w-[90%] mx-auto ${open && "lg:mb-52 lg:pt-10"}`}
         >

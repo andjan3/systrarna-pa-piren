@@ -15,18 +15,28 @@ interface ImageBannerProps {
     link: LinkType;
     content: React.ReactNode;
     button_title: string;
+    category: string;
   };
 }
 
 export const ImageBanner = ({ blok }: ImageBannerProps) => {
-  const { title, image, content, link, button_title } = blok;
-  const { open, setOpen } = useStore();
+  const { title, image, content, button_title } = blok;
+  const { open, setOpen, setCategory } = useStore();
 
   const handleOnClick = () => {
     setOpen(!open);
   };
+
+  const categoryString = Array.isArray(blok.category)
+    ? blok.category.join(", ")
+    : blok.category;
+
+  const handleSetValue = (value: string) => {
+    setCategory(value);
+  };
+
   return (
-    <div className=" h-[75vh] lg:h-[90vh] relative">
+    <div className="h-[75vh] lg:h-[90vh] relative">
       <div className="h-[100%] lg:h-[85%] relative">
         <Image
           src={image.filename}
@@ -46,7 +56,10 @@ export const ImageBanner = ({ blok }: ImageBannerProps) => {
 
           <button
             className="mt-4 px-6 py-2 bg-[#569fd4] text-[20px] text-white rounded hover:bg-white hover:text-black"
-            onClick={() => handleOnClick()}
+            onClick={() => {
+              handleOnClick();
+              handleSetValue(categoryString);
+            }}
           >
             {button_title}
           </button>
